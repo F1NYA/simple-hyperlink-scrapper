@@ -1,11 +1,14 @@
 [[source]]
-name = "pypi"
+name = "hyperlink-scrappy"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pylint = "==2.5.2"
 
 [packages]
+lxml = "==4.5.1"
+scrapy = "==2.1.0"
 
 [requires]
 python_version = "3.8"

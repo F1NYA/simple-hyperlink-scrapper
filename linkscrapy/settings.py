@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for spider project
+# Scrapy settings for linkscrapy project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'spider'
+BOT_NAME = 'linkscrapy'
 
-SPIDER_MODULES = ['spider.spiders']
-NEWSPIDER_MODULE = 'spider.spiders'
+SPIDER_MODULES = ['linkscrapy.spiders']
+NEWSPIDER_MODULE = 'linkscrapy.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'spider (+http://www.yourdomain.com)'
+#USER_AGENT = 'linkscrapy (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,26 +47,30 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'spider.middlewares.SpiderSpiderMiddleware': 543,
+#    'linkscrapy.middlewares.LinkscrapySpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'spider.middlewares.SpiderDownloaderMiddleware': 543,
+#    'linkscrapy.middlewares.LinkscrapyDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+# EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+#    'scrapy.extensions.closespider.CloseSpider': 100,
+#    "scrapy.extensions.logstats.LogStats": None,
+#    "scrapy.extensions.memusage.MemoryUsage": None,
+#    "scrapy.extensions.corestats.CoreStats": None
+# }
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'spider.pipelines.SpiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'linkscrapy.pipelines.LinkscrapyPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

@@ -7,7 +7,7 @@ name = "pypi"
 pylint = "==2.5.2"
 
 [packages]
-lxml = "==4.5.1"
+lxml = "==4.6.2"
 scrapy = "==2.1.0"
 
 [requires]
